@@ -185,8 +185,8 @@ nav {
 .find-offer-btn-1{
     background-color: #ececec;
     width: 85%; 
-    padding: 15px; /* Increased padding */
-    margin-bottom: 30px; /* Increased margin */
+    padding: 15px; 
+    margin-bottom: 30px; 
     color: rgb(15, 15, 15);
     border: none;
     border-radius: 5px;
@@ -206,10 +206,10 @@ nav {
 
 .find-offer-btn {
     background-color: #00d9a1;
-    width: 35%; /* Increased width */
+    width: 35%; 
     margin-left: 19px;
-    padding: 15px; /* Increased padding */
-    margin-bottom: 30px; /* Increased margin */
+    padding: 15px; 
+    margin-bottom: 30px;
     color: rgb(15, 15, 15);
     border: none;
     border-radius: 20px;
@@ -233,20 +233,20 @@ nav {
     background-color: transparent;
     border: 2px solid #ddd;
     color: #fcf8f8;
-    padding: 15px 30px; /* Increased padding */
+    padding: 15px 30px;
     border-radius: 30px;
-    margin-top: 10vh; /* Increased margin */
+    margin-top: 10vh; 
     cursor: pointer;
     text-decoration: underline;
-    width: 100%; /* Full width */
-    max-width: 300px; /* Increased max-width */
+    width: 100%; 
+    max-width: 300px; 
 }
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
     .offer-finder {
         flex-direction: column;
-        padding: 30px; /* Adjusted padding for smaller screens */
+        padding: 30px; 
     }
 
     .offer-options {
@@ -259,7 +259,7 @@ nav {
     .find-offer-btn,
     .zappr-btn {
         width: 100%;
-        max-width: 350px; /* Adjusted max-width for smaller screens */
+        max-width: 350px; 
     }
 
     .find-offer-btn {
@@ -678,7 +678,7 @@ nav {
     .cta-button {
         padding: 10px 20px;
         font-size: 13px;
-        width: 100%; /* Makes button full-width for small screens */
+        width: 100%; 
         max-width: 300px;
     }
 }
