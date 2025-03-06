@@ -585,3 +585,37 @@ nav {
   
 /* end of  buy and sell section . */
 
+
+
+.signup-banner {
+    background-color: #CFBAFF;
+    ;
+    text-align: center;
+    padding: 50px 20px;
+    padding-top: 90px;
+    color: #000;
+}
+
+.signup-banner h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    color: #000;
+    background-color: #999898;
+    transition: linear .3s;
+}
