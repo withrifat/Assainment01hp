@@ -619,3 +619,78 @@ nav {
     background-color: #999898;
     transition: linear .3s;
 }
+
+/*  */
+/* steart footer */
+footer {
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 7vh 10vh;
+}
+
+.footer-column {
+    flex-basis: 25%;
+    margin-bottom: 20px;
+}
+
+.footer-column h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-column ul li a strong {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .header, .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .offer-options select, .offer-finder input {
+        width: 100%;
+    }
+
+    .features-container, .offers-section {
+        flex-direction: column;
+    }
+
+    .offers-container {
+        margin: 20px 0;
+    }
+}
