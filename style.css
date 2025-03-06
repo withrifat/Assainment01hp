@@ -16,7 +16,28 @@ body {
     color: #333;
     
 }
+a {
+    transition: color 0.3s ease-in-out;
+}
+a:hover {
+    color: #00d9a1;
+    text-shadow: 0px 0px 10px rgba(0, 217, 161, 0.3);
+}
 
+h2 {
+    transition: color 0.3s ease-in-out;
+}
+h2:hover {
+    color: rgb(22, 196, 127);
+    text-shadow: 0px 0px 10px rgba(0, 217, 161, 0.3);
+}
+p {
+    transition: color 0.3s ease-in-out;
+}
+p:hover {
+    color: 18230F;
+    text-shadow: 0px 0px 10px rgba(0, 217, 161, 0.3);
+}
 /* Header section style */
 nav {
     display: flex;
@@ -25,15 +46,26 @@ nav {
     padding: 10px 28px;
     background-color: #f8f8f8;
     flex-wrap: wrap;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+
+    /* Hover Effect: Change navbar background on hover */
+    &:hover {
+        background-color: #e6e6e6;
+    }
 
     img {
-        height: 24px; 
+        height: 24px;
+        transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+        
+        &:hover {
+            transform: scale(1.1); /* Slightly increase size */
+        }
     }
 
     ul {
         list-style-type: none;
         display: flex;
-        gap: 25px; 
+        gap: 25px;
         margin: 0;
         padding: 0;
 
@@ -41,8 +73,32 @@ nav {
             a {
                 text-decoration: none;
                 color: #070707;
-                font-size: 16px; 
+                font-size: 16px;
                 font-weight: bold;
+                position: relative;
+                transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Smooth effect */
+            }
+
+            /* Link Hover Effect */
+            a:hover {
+                color: #00d9a1;
+                text-shadow: 0px 0px 10px rgba(0, 217, 161, 0.3);
+            }
+
+            /* Animated Underline Effect */
+            a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                width: 0%;
+                height: 2px;
+                background-color: #FF5733;
+                transition: width 0.3s ease-in-out;
+            }
+
+            a:hover::after {
+                width: 100%;
             }
         }
     }
@@ -50,30 +106,48 @@ nav {
     .box {
         display: flex;
         align-items: center;
-        gap: 15px; 
+        gap: 15px;
 
         button {
             padding: 12px 18px;
             border: none;
             border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
 
             &.first {
                 background-color: #f1f1f1;
+                
+                &:hover {
+                    background-color: #e0e0e0;
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                    transform: translateY(-2px);
+                }
             }
 
             &.second {
                 background-color: #000000;
                 color: white;
+
+                &:hover {
+                    background-color: #333;
+                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+                    transform: translateY(-2px);
+                }
             }
         }
 
         img {
-            height: 32px; 
+            height: 32px;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: rotate(10deg);
+            }
         }
     }
 }
+
 
 @media (max-width: 768px) {
     img {
@@ -122,10 +196,12 @@ nav {
 
 
 /* Add css for hero section  */
+/* Offer Finder Section */
 .offer-finder-section {
     position: relative;
     text-align: center;
     padding: 100px;
+    overflow: hidden;
 }
 
 .background-image {
@@ -139,76 +215,100 @@ nav {
     bottom: 0;
     z-index: -1;
     filter: blur(2px) brightness(70%);
+    transition: filter 0.3s ease-in-out;
 }
 
 .offer-finder {
     background-color: white;
-    padding: 50px 100px; 
-    display: flex;
-    border-radius: 10px;
+    padding: 50px 100px;
     display: inline-block;
+    border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    max-width: 90%; 
+    max-width: 90%;
     margin: 0 auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.offer-finder:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .offer-finder h2 {
-    font-size: 36px; 
+    font-size: 36px;
     text-align: center;
     margin-bottom: 30px;
+    transition: color 0.3s ease-in-out;
+}
+
+.offer-finder h2:hover {
+    color: #00d9a1;
+    text-shadow: 0px 0px 10px rgba(0, 217, 161, 0.3);
 }
 
 .offer-options {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px; 
-    gap: .8rem; 
+    margin-bottom: 30px;
+    gap: 0.8rem;
 }
 
 .offer-options select {
-    padding: 10px 25px; 
+    padding: 10px 25px;
     border-radius: 5px;
     border: 1px solid #ccc;
     width: 100%;
     background-color: #ececec;
-    max-width: 400px; 
+    max-width: 400px;
+    transition: border 0.3s ease-in-out;
+}
+
+.offer-options select:hover {
+    border: 1px solid #00d9a1;
 }
 
 .offer-finder input {
     width: 75%;
-    padding: 15px; 
-    margin-bottom: 30px; 
+    padding: 15px;
+    margin-bottom: 30px;
     border-radius: 5px;
     background-color: #ececec;
     border: none;
+    transition: background-color 0.3s ease-in-out;
 }
-.find-offer-btn-1{
+
+.offer-finder input:focus {
+    background-color: white;
+    border: 2px solid #00d9a1;
+    outline: none;
+}
+
+.find-offer-btn-1 {
     background-color: #ececec;
-    width: 85%; 
-    padding: 15px; 
-    margin-bottom: 30px; 
+    width: 85%;
+    padding: 15px;
+    margin-bottom: 30px;
     color: rgb(15, 15, 15);
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-
+    transition: background-color 0.3s, transform 0.3s, border-radius 0.3s;
 }
-.find-offer-btn-1:hover{
+
+.find-offer-btn-1:hover {
     background-color: #2f3635;
     color: white;
     width: 90%;
-    border-radius:  15px;
-}
-.downbtn {
-    display: flex;
+    border-radius: 15px;
+    transform: scale(1.05);
 }
 
 .find-offer-btn {
     background-color: #00d9a1;
-    width: 35%; 
+    width: 35%;
     margin-left: 19px;
-    padding: 15px; 
+    padding: 15px;
     margin-bottom: 30px;
     color: rgb(15, 15, 15);
     border: none;
@@ -235,12 +335,20 @@ nav {
     color: #fcf8f8;
     padding: 15px 30px;
     border-radius: 30px;
-    margin-top: 10vh; 
+    margin-top: 10vh;
     cursor: pointer;
     text-decoration: underline;
-    width: 100%; 
-    max-width: 300px; 
+    width: 100%;
+    max-width: 300px;
+    transition: border 0.3s, color 0.3s, transform 0.3s;
 }
+
+.zappr-btn:hover {
+    border: 2px solid #00d9a1;
+    color: #00d9a1;
+    transform: scale(1.05);
+}
+
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
@@ -276,7 +384,9 @@ nav {
     padding: 4vw 0; 
     text-align: center;
 }
-
+.crypto-banner p:hover {
+    transform: scale(1.02);
+}
 .crypto-banner p {
     font-size: 1.8vw;  
     font-weight: bold;
@@ -298,6 +408,9 @@ nav {
     width: 10vw; 
     height: auto; 
     max-width: 100%; 
+}
+.crypto-banner img:hover {
+    transform: scale(1.02);
 }
 
 @media (max-width: 768px) {
