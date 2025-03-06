@@ -589,10 +589,8 @@ nav {
 
 .signup-banner {
     background-color: #CFBAFF;
-    ;
     text-align: center;
-    padding: 50px 20px;
-    padding-top: 90px;
+    padding: 90px 20px 50px;
     color: #000;
 }
 
@@ -601,6 +599,7 @@ nav {
     font-weight: bold;
     margin-bottom: 30px;
     padding-bottom: 20px;
+    line-height: 1.2; /* Improves readability */
 }
 
 .cta-button {
@@ -617,10 +616,54 @@ nav {
 .cta-button:hover {
     color: #000;
     background-color: #999898;
-    transition: linear .3s;
+    transition: linear 0.3s;
 }
 
-/*  */
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .signup-banner h1 {
+        font-size: 45px;
+    }
+
+    .cta-button {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-banner {
+        padding: 70px 15px;
+    }
+
+    .signup-banner h1 {
+        font-size: 38px;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-banner {
+        padding: 50px 10px;
+    }
+
+    .signup-banner h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 13px;
+        width: 100%; /* Makes button full-width for small screens */
+        max-width: 300px;
+    }
+}
+
 /* steart footer */
 footer {
     padding: 20px;
